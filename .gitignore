@@ -1,0 +1,5 @@
+newbellringing-server/reset_mail_config.php
+newbellringing-server/error_log
+newbellringing-server/password_reset_local.override.php
+newbellringing-server/inc/.env
+newbellringing-server/vendor/

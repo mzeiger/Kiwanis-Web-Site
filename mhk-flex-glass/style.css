@@ -1,0 +1,72 @@
+/* Front-end + shared styles for MHK Flex Glass */
+
+.wp-block-mhk-flex-glass,
+.mhk-flex-glass {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: var(--mhk-max-width, 100%);
+	margin-left: auto;
+	margin-right: auto;
+	padding: var(--mhk-padding, 10px);
+}
+
+.wp-block-mhk-flex-glass *,
+.mhk-flex-glass * {
+	box-sizing: border-box;
+}
+
+/* Flex lives on the inner layout wrapper */
+.mhk-flex-glass__layout {
+	display: flex;
+	flex-direction: var(--mhk-flex-direction, column);
+	align-items: var(--mhk-align-items, center);
+	justify-content: var(--mhk-justify-content, center);
+	flex-wrap: var(--mhk-flex-wrap, nowrap);
+	gap: var(--mhk-gap, 10px);
+	width: 100%;
+}
+
+/*
+ * Older blocks saved before the __layout wrapper:
+ * apply flex on the outer container instead.
+ */
+.wp-block-mhk-flex-glass:not(:has(> .mhk-flex-glass__layout)) {
+	display: flex;
+	flex-direction: var(--mhk-flex-direction, column);
+	align-items: var(--mhk-align-items, center);
+	justify-content: var(--mhk-justify-content, center);
+	flex-wrap: var(--mhk-flex-wrap, nowrap);
+	gap: var(--mhk-gap, 10px);
+}
+
+.mhk-flex-glass--frosted {
+	background: rgba(255, 255, 255, 0.12);
+	backdrop-filter: blur(24px);
+	-webkit-backdrop-filter: blur(24px);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-radius: 24px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* One flex item for a whole Custom HTML block */
+.mhk-flex-unit {
+	display: block;
+	max-width: 100%;
+}
+
+.mhk-flex-glass .wp-block-image,
+.mhk-flex-glass figure {
+	margin: 0;
+	max-width: 100%;
+}
+
+.mhk-flex-glass .wp-block-image img,
+.mhk-flex-glass img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.mhk-flex-glass p {
+	margin: 0;
+}

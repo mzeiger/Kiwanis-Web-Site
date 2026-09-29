@@ -1,0 +1,35 @@
+/* Editor-only: flex the block list so Direction/Row updates live */
+
+.editor-styles-wrapper .mhk-flex-glass {
+	min-height: 80px;
+}
+
+.editor-styles-wrapper .mhk-flex-glass--frosted {
+	background: rgba(255, 255, 255, 0.35);
+	border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/*
+ * Gutenberg nests blocks under .block-editor-block-list__layout.
+ * That element must be the flex container in the editor.
+ */
+.editor-styles-wrapper .mhk-flex-glass .mhk-flex-glass__layout,
+.editor-styles-wrapper .mhk-flex-glass .mhk-flex-glass__layout > .block-editor-block-list__layout,
+.editor-styles-wrapper .mhk-flex-glass > .block-editor-inner-blocks > .block-editor-block-list__layout {
+	display: flex !important;
+	flex-direction: var(--mhk-flex-direction, column) !important;
+	align-items: var(--mhk-align-items, center) !important;
+	justify-content: var(--mhk-justify-content, center) !important;
+	flex-wrap: var(--mhk-flex-wrap, nowrap) !important;
+	gap: var(--mhk-gap, 10px) !important;
+	width: 100%;
+}
+
+.editor-styles-wrapper .mhk-flex-glass .block-editor-inner-blocks {
+	width: 100%;
+}
+
+.editor-styles-wrapper .mhk-flex-glass .block-list-appender {
+	margin: 8px 0 0;
+	width: auto;
+}

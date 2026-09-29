@@ -1,0 +1,6 @@
+A template for the .env file since .env is notin github
+No quotes needed
+
+DB_DATABASE_NAME=<database name here>
+DB_DATABASE_USER_NAME=<database username here>
+DB_DATABASE_PASSWORD=<database password here>
